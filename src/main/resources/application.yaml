@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: local
+    group:
+      local:
+        - devdb
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/devdb
+    username: eric
+    password: eric1234
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
